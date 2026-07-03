@@ -5,8 +5,7 @@
   //  Set a modifier to true/false and pick the letter.
   //  Default below = Alt + A
   // ============================================================
-  const SHORTCUT = { ctrl: false, alt: true, shift: false, meta: false, key: "a", code: "KeyA" };
-  const EXTENSION_VERSION = "1.0.2";
+  const SHORTCUT = { ctrl: false, alt: true, shift: false, meta: false, key: "a" };
   // ============================================================
 
   const log = (...a) => console.log("[Commbox Quick Copy]", ...a);
@@ -17,10 +16,7 @@
       !!e.ctrlKey  === !!SHORTCUT.ctrl &&
       !!e.shiftKey === !!SHORTCUT.shift &&
       !!e.metaKey  === !!SHORTCUT.meta &&
-      (
-        (e.key || "").toLowerCase() === SHORTCUT.key.toLowerCase() ||
-        (SHORTCUT.code && e.code === SHORTCUT.code)
-      )
+      (e.key || "").toLowerCase() === SHORTCUT.key.toLowerCase()
     );
   }
 
@@ -119,5 +115,5 @@
     toastEl._t = setTimeout(() => { toastEl.style.opacity = "0"; }, 1400);
   }
 
-  log("loaded version", EXTENSION_VERSION, "Shortcut:", SHORTCUT);
+  log("loaded. Shortcut:", SHORTCUT);
 })();
