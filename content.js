@@ -3,9 +3,9 @@
   //  CONFIG  —  change your shortcut here, then reload the
   //  extension (chrome://extensions -> the reload arrow).
   //  Set a modifier to true/false and pick the letter.
-  //  Default below = Alt + A
+  //  Default below = Alt + Shift + C
   // ============================================================
-  const SHORTCUT = { ctrl: false, alt: true, shift: false, meta: false, key: "a" };
+  const SHORTCUT = { ctrl: false, alt: true, shift: true, meta: false, key: "c" };
   // ============================================================
 
   const log = (...a) => console.log("[Commbox Quick Copy]", ...a);
